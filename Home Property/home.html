@@ -68,8 +68,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="aa-header-right">
-                                <a href="register.html" class="aa-register">Register</a>
-                                <a href="signin.html" class="aa-login">Login</a>
+                                <a href="signin.html" class="aa-login">Logout</a>
                             </div>
                         </div>
                     </div>
@@ -120,7 +119,7 @@
                         </ul>
                     </li>
                     <li><a href="formCreate.html">CREATE</a></li>
-                    <li><a href="404.html">404 PAGE</a></li>
+                    <li><a href=""></a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -200,94 +199,9 @@
             </div>
             <div class="aa-latest-properties-content">
                 <div class="row">
-                    <div class="col-md-4">
-                        <article class="aa-properties-item">
-                            <a href="#" class="aa-properties-item-img">
-                                <img src="img/item/1.jpg" alt="img">
-                            </a>
-                            <div class="aa-tag for-sale">
-                                For Sale
-                            </div>
-                            <div class="aa-properties-item-content">
-                                <div class="aa-properties-info">
-                                    <span>5 Rooms</span>
-                                    <span>2 Beds</span>
-                                    <span>3 Baths</span>
-                                    <span>1100 SQ FT</span>
-                                </div>
-                                <div class="aa-properties-about">
-                                    <h3><a href="#">Appartment Title</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero
-                                        ducimus quibusdam odit vitae.</p>
-                                </div>
-                                <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                                    <a href="#" class="aa-secondary-btn">View Details</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="aa-properties-item">
-                            <a href="#" class="aa-properties-item-img">
-                                <img src="img/item/1.jpg" alt="img">
-                            </a>
-                            <div class="aa-tag for-sale">
-                                For Sale
-                            </div>
-                            <div class="aa-properties-item-content">
-                                <div class="aa-properties-info">
-                                    <span>5 Rooms</span>
-                                    <span>2 Beds</span>
-                                    <span>3 Baths</span>
-                                    <span>1100 SQ FT</span>
-                                </div>
-                                <div class="aa-properties-about">
-                                    <h3><a href="#">Appartment Title</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero
-                                        ducimus quibusdam odit vitae.</p>
-                                </div>
-                                <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                                    <a href="#" class="aa-secondary-btn">View Details</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="aa-properties-item">
-                            <a href="#" class="aa-properties-item-img">
-                                <img src="img/item/1.jpg" alt="img">
-                            </a>
-                            <div class="aa-tag for-sale">
-                                For Sale
-                            </div>
-                            <div class="aa-properties-item-content">
-                                <div class="aa-properties-info">
-                                    <span>5 Rooms</span>
-                                    <span>2 Beds</span>
-                                    <span>3 Baths</span>
-                                    <span>1100 SQ FT</span>
-                                </div>
-                                <div class="aa-properties-about">
-                                    <h3><a href="#">Appartment Title</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero
-                                        ducimus quibusdam odit vitae.</p>
-                                </div>
-                                <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                                    <a href="#" class="aa-secondary-btn">View Details</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                    <div id="listProduct">
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -708,5 +622,55 @@
 <!-- Custom js -->
 <script src="js/custom.js"></script>
 
+<script>
+    showListProduct()
+    function showListProduct(){
+        $.ajax({
+
+            type: "GET",
+            url: "http://localhost:3000/products",
+            success: (listProduct) =>{
+                console.log(listProduct)
+                let htmlProducts ="";
+                console.log(htmlProducts)
+                for (let product of listProduct.products) {
+                    if(!product.status) {
+                        product.status = "Chua thue"
+                    } else {
+                        product.status = "Da thue"
+                    }
+                    htmlProducts += ` <div class="col-md-4">
+                        <article class="aa-properties-item">
+                            <a href="#" class="aa-properties-item-img">
+                                <img src="${product.imageP}" alt="img">
+                            </a>
+                            <div class="aa-tag for-sale">
+                                ${product.status}
+                            </div>
+                            <div class="aa-properties-item-content">
+                                <div class="aa-properties-info">
+
+                                </div>
+                                <div class="aa-properties-about">
+                                    <h3><a href="#">${product.nameProduct}</a></h3>
+                                    <p>${product.description}</p>
+                                </div>
+                                <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      ${product.price}$
+                    </span>
+                                    <a href="properties-detail.html" class="aa-secondary-btn">View Details</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>`
+                }
+
+
+                $('#listProduct').html(htmlProducts)
+            }
+    })
+    }
+</script>
 </body>
 </html>
