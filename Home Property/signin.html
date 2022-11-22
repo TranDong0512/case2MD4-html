@@ -100,12 +100,16 @@
                     type: 'POST',
                     url:'http://localhost:3000/users/login',
                     headers:{
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+
+
+                        Authorization : 'Bearer '+ localStorage.getItem('token')
                     },
                     data: JSON.stringify(user),
                     success: (token) =>{
                         if(token.token){
-                            localStorage.setItem("token",token)
+                            console.log(token.token)
+                            localStorage.setItem("token",token.token)
                             document.location.href='home.html'
                         }else {
                             alert(token.mess)
