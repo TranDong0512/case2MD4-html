@@ -68,7 +68,10 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="aa-header-right">
-                                <a href="signin.html" class="aa-login">Logout</a>
+                                <a href="signin.html" onclick="function logOut() {
+                                    localStorage.clear()
+                                }
+                                logOut()" class="aa-login">Logout</a>
                             </div>
                         </div>
                     </div>
@@ -629,10 +632,14 @@
 
             type: "GET",
             url: "http://localhost:3000/products",
+            headers:{
+                'Content-Type': 'application/json',
+                Authorization : 'Bearer '+ localStorage.getItem('token')
+            },
+
             success: (listProduct) =>{
-                console.log(listProduct)
+                console.log('aaa')
                 let htmlProducts ="";
-                console.log(htmlProducts)
                 for (let product of listProduct.products) {
                     if(!product.status) {
                         product.status = "Chua thue"
@@ -649,7 +656,7 @@
                             </div>
                             <div class="aa-properties-item-content">
                                 <div class="aa-properties-info">
-
+                                     <p>${product.address}</p>
                                 </div>
                                 <div class="aa-properties-about">
                                     <h3><a href="#">${product.nameProduct}</a></h3>
@@ -659,13 +666,12 @@
                     <span class="aa-price">
                       ${product.price}$
                     </span>
-                                    <a href="properties-detail.html" class="aa-secondary-btn">View Details</a>
+                                    <a href="properties-detail.html/${product._id}" class="aa-secondary-btn">View Details</a>
                                 </div>
                             </div>
                         </article>
                     </div>`
                 }
-
 
                 $('#listProduct').html(htmlProducts)
             }
