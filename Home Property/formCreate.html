@@ -98,7 +98,7 @@
                 </button>
                 <!-- LOGO -->
                 <!-- Text based logo -->
-                <a class="navbar-brand aa-logo" href="index.html"> Home <span>Property</span></a>
+                <a class="navbar-brand aa-logo" href="home.html"> Home <span>Property</span></a>
                 <!-- Image based logo -->
                 <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
             </div>
@@ -113,7 +113,7 @@
                             <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>
                         </ul>
                     </li>
-                    <li><a href="gallery.html">GALLERY</a></li>
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span
                                 class="caret"></span></a>
@@ -123,7 +123,7 @@
                         </ul>
                     </li>
                     <li class="active"><a href="formCreate.html">CREATE</a></li>
-                    <li><a href="404.html">404 PAGE</a></li>
+                    <li><a href="404.html">HISTORY</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -149,7 +149,7 @@
                             <span></span>
                         </div>
                         <div class="aa-contact-form">
-
+                            <form enctype="multipart/form-data">
                                 <p class="comment-form-author">
                                     <label for="name">Name <span class="required">*</span></label>
                                     <input type="text" name="author" value="" id="name" size="30" required="required">
@@ -172,14 +172,15 @@
 
                                 </div>
                                 <p class="comment-form-comment">
-                                    <input type="file" name="description" id="imageP" required="required"
-                                           style="border: 1px black"></input>
+                                    <input type="file" name="file" id="file" required="required"
+                                           style="border: 1px black">
                                 </p>
 
                                 <p class="form-submit">
-                                    <input type="submit" onclick="create()" name="submit" class="aa-browse-btn"
-                                           value="Send Message">
+                                    <input type="button" onclick="create()" name="submit" class="aa-browse-btn"
+                                           value="Create">
                                 </p>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -270,29 +271,41 @@
         let category = $('#categoryInput').val();
         let address = $('#address').val();
         let description = $('#description').val();
-        let imageP = $('#imageP').val()
+        let userCreate = localStorage.getItem('idUser')
+
+
         let newProduct={
             nameProduct:nameProduct,
             price:price,
             category:category,
             address:address,
             description:description,
-            imageP:imageP
         }
-        console.log(newProduct)
+        let formData = new FormData();
+        let file = $('#file')[0].files[0];
+        formData.append('file',file);
+        formData.append('nameProduct', nameProduct)
+        formData.append('price', price)
+        formData.append('category',category)
+        formData.append('address',address)
+        formData.append('description',description)
+        formData.append('userCreate',userCreate)
+
         $.ajax({
             type: "POST",
             url: "http://localhost:3000/products",
             headers: {
-                'Content-Type': 'application/json',
+
                 Authorization : 'Bearer '+ localStorage.getItem('token')
             },
-            data: JSON.stringify(newProduct),
+            data:formData,
+            contentType: false,
+            processData : false,
             success: () => {
-                document.location.href= "home.html"
 
             }
         })
+        document.location.href= "home.html"
     }
 </script>
 

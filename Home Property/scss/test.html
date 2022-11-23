@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const get_day_of_time = (d1, d2) => {
+        let ms1 = d1.getTime();
+        let ms2 = d2.getTime();
+        return Math.ceil((ms2 - ms1) / (24*60*60*1000));
+    };
+
+    let birthday = new Date('2022-11-24');
+    console.log(birthday.toUTCString());
+    //Tue, 08 Oct 2019 00:00:00 GMT
+
+    let today = new Date('2022-11-30');
+    console.log(today.toUTCString());
+    //Wed, 22 Dec 2021 01:30:49 GMT
+
+    let time = get_day_of_time(birthday,today)
+    console.log(time+ ' day');
+    //807 day
+</script>
+</body>
+</html>

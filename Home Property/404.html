@@ -82,6 +82,7 @@
   </header>
   <!-- End header section -->
   <!-- Start menu section -->
+  <div>
   <section id="aa-menu-area">
     <nav class="navbar navbar-default main-navbar" role="navigation">  
       <div class="container">
@@ -101,7 +102,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="home.html">HOME</a></li>
              <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -109,7 +110,7 @@
                 <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>                                            
               </ul>
             </li>
-            <li><a href="gallery.html">GALLERY</a></li>                                         
+
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -117,8 +118,8 @@
                 <li><a href="blog-single.html">BLOG DETAILS</a></li>                                            
               </ul>
             </li>
-            <li><a href="formCreate.html">CONTACT</a></li>
-            <li class="active"><a href="#">404 PAGE</a></li>
+              <li><a href="formCreate.html">CREATE</a></li>
+              <li><a href="404.html">HISTORY</a></li>
             <!-- <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">PAGES <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -132,42 +133,103 @@
       </div>          
     </nav> 
   </section>
+  </div>
   <!-- End menu section -->
 
   <!-- Start Proerty header  -->
-  <section id="aa-property-header">
+  <div style="margin-top: 36px">
+  <section id="aa-property-header" >
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="aa-property-header-inner">
-            <h2>404 Error</h2>
+            <h2> HISTORY</h2>
             <ol class="breadcrumb">
-            <li><a href="#">HOME</a></li>            
-            <li class="active">404</li>
           </ol>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </section>
+  </div>
   <!-- End Proerty header  -->
-  <section id="aa-error">
-    <div class="container">
-      <row>
-        <div class="col-md-12">
-          <div class="aa-error-area">
-            <h2>404</h2>
-            <p><span class="fa fa-warning"></span>Oops! The Page you requested was not found!</p>
-            <a href="#">Back Home</a>
+  <section class="vh-100" style="background-color: #fdccbc;">
+      <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col">
+                  <p><span class="h2">Shopping Cart </span><span class="h4">(1 item in your cart)</span></p>
+
+                  <div class="card mb-4">
+                      <div class="card-body p-4">
+
+                          <div class="row align-items-center">
+                              <div class="col-md-2">
+                                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/1.webp" style="width: 100px;height: 100px"
+                                       class="img-fluid" alt="Generic placeholder image">
+                              </div>
+                              <div class="col-md-2 d-flex justify-content-center">
+                                  <div>
+                                      <p class="small text-muted mb-4 pb-2">Name</p>
+                                      <p class="lead fw-normal mb-0">iPad Air</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 d-flex justify-content-center">
+                                  <div>
+                                      <p class="small text-muted mb-4 pb-2">Color</p>
+                                      <p class="lead fw-normal mb-0"><i class="fas fa-circle me-2" style="color: #fdd8d2;"></i>
+                                          pink rose</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 d-flex justify-content-center">
+                                  <div>
+                                      <p class="small text-muted mb-4 pb-2">Quantity</p>
+                                      <p class="lead fw-normal mb-0">1</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 d-flex justify-content-center">
+                                  <div>
+                                      <p class="small text-muted mb-4 pb-2">Price</p>
+                                      <p class="lead fw-normal mb-0">$799</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-2 d-flex justify-content-center">
+                                  <div>
+                                      <p class="small text-muted mb-4 pb-2">Total</p>
+                                      <p class="lead fw-normal mb-0">$799</p>
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+
+                  <div class="card mb-5">
+                      <div class="card-body p-4">
+
+                          <div class="float-end">
+                              <p class="mb-0 me-5 d-flex align-items-center">
+                                  <span class="small text-muted me-2">Order total:</span> <span
+                                      class="lead fw-normal">$799</span>
+                              </p>
+                          </div>
+
+                      </div>
+                  </div>
+
+                  <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-light btn-lg me-2">Continue shopping</button>
+                      <button type="button" class="btn btn-primary btn-lg">Add to cart</button>
+                  </div>
+
+              </div>
           </div>
-        </div>
-      </row>
-    </div>
+      </div>
+  </section>
   </section>
 
 
   <!-- Footer -->
-  <footer id="aa-footer">
+  <footer id="aa-footer" style="margin-top: 50px">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
