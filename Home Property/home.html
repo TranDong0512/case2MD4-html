@@ -97,13 +97,13 @@
                 </button>
                 <!-- LOGO -->
                 <!-- Text based logo -->
-                <a class="navbar-brand aa-logo" href="index.html"> Home <span>Property</span></a>
+                <a class="navbar-brand aa-logo" href="home.html"> Home <span>Property</span></a>
                 <!-- Image based logo -->
                 <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li class="active"><a href="home.html">HOME</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
                                 class="caret"></span></a>
@@ -112,7 +112,7 @@
                             <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>
                         </ul>
                     </li>
-                    <li><a href="gallery.html">GALLERY</a></li>
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span
                                 class="caret"></span></a>
@@ -122,7 +122,7 @@
                         </ul>
                     </li>
                     <li><a href="formCreate.html">CREATE</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="404.html">HISTORY</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -163,11 +163,11 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="aa-single-advance-search">
-                                <input type="text" placeholder="Type Your Location">
+                                <input type="text" id="nameProduct" placeholder="Type Your Location">
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="aa-single-advance-search">
+                            <div class="aa-single-advance-search" id="category">
                                 <select>
                                     <option value="0" selected>Category</option>
                                     <option value="1">Flat</option>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="aa-single-advance-search">
-                                <input class="aa-search-btn" type="submit" value="Search">
+                                <input class="aa-search-btn"  onclick="search()" value="Search">
                             </div>
                         </div>
                     </div>
@@ -284,132 +284,6 @@
 </section>
 <!-- / Service section -->
 
-
-<!-- Our Agent Section-->
-<section id="aa-agents">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="aa-agents-area">
-                    <div class="aa-title">
-                        <h2>Our Agents</h2>
-                        <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero
-                            voluptatibus.</p>
-                    </div>
-                    <!-- agents content -->
-                    <div class="aa-agents-content">
-                        <ul class="aa-agents-slider">
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-3.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Paul Walker</a></h4>
-                                        <span>Director</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-4.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">John Smith</a></h4>
-                                        <span>Jr. Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-1.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Philip Smith</a></h4>
-                                        <span>Top Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-5.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Adam Barney</a></h4>
-                                        <span>Expert Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-3.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Paul Walker</a></h4>
-                                        <span>Director</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-4.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">John Smith</a></h4>
-                                        <span>Jr. Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- / Our Agent Section-->
 
 <!-- Client Testimonial -->
 <section id="aa-client-testimonial">
@@ -608,7 +482,6 @@
 </footer>
 <!-- / Footer -->
 
-
 <!-- jQuery library -->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 <script src="js/jquery.min.js"></script>
@@ -638,7 +511,7 @@
             },
 
             success: (listProduct) =>{
-                console.log('aaa')
+                console.log(listProduct)
                 let htmlProducts ="";
                 for (let product of listProduct.products) {
                     if(!product.status) {
@@ -666,16 +539,87 @@
                     <span class="aa-price">
                       ${product.price}$
                     </span>
-                                    <a href="properties-detail.html/${product._id}" class="aa-secondary-btn">View Details</a>
+                                    <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
                                 </div>
                             </div>
                         </article>
                     </div>`
                 }
-
                 $('#listProduct').html(htmlProducts)
             }
     })
+    }
+    function showDetail(idProduct){
+        console.log(idProduct)
+        document.location.href="properties-detail.html"
+        localStorage.setItem('idProduct',idProduct)
+    }
+
+    function search() {
+        let nameProduct = $('#nameProduct').val();
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/products/findByName?name="+nameProduct,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            success:(dataFind)=>{
+                let product = dataFind.product
+                let productHtml = `<div class="col-md-4">
+                        <article class="aa-properties-item">
+                            <a href="#" class="aa-properties-item-img">
+                                <img src="${product.imageP}" alt="ảnh lỗi" style="width: 360px !important; height: 195.65px !important;">
+                            </a>
+                            <div class="aa-tag for-sale">
+                                ${product.status}
+                            </div>
+                            <div class="aa-properties-item-content"v >
+                                <div class="aa-properties-info">
+                                     <p>${product.address}</p>
+                                </div>
+                                <div class="aa-properties-about">
+                                    <h3><a href="#">${product.nameProduct}</a></h3>
+                                    <p>${product.description}</p>
+                                </div>
+                                <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      ${product.price}$
+                    </span>
+                       <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>`
+                $('#listProduct').html(productHtml)
+
+            }
+        })
+    }
+
+    showCategory()
+    function showCategory(){
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/categories",
+
+            success: (listCategories) => {
+                console.log(listCategories)
+                let htmlCategory = `<select id="categoryInput" name="cate">
+                                        <option disabled selected >Category</option>`
+                for (let category of listCategories) {
+                    htmlCategory += `<option value="${category._id}" name="cate">${category.nameCategory}<button onclick="searchCategory()"></button></option>`
+                }
+                htmlCategory += `</select>`
+
+                $('#category').html(htmlCategory)
+            }
+        })
+    }
+
+    function searchCategory(){
+        console.log(11111)
     }
 </script>
 </body>

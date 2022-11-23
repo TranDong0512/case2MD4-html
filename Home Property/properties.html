@@ -96,13 +96,13 @@
           </button>
           <!-- LOGO -->                                               
           <!-- Text based logo -->
-          <a class="navbar-brand aa-logo" href="index.html"> Home <span>Property</span></a>
+          <a class="navbar-brand aa-logo" href="home.html"> Home <span>Property</span></a>
           <!-- Image based logo -->
           <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="home.html">HOME</a></li>
              <li class="dropdown active">
               <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -110,7 +110,7 @@
                 <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>                                            
               </ul>
             </li>
-            <li><a href="gallery.html">GALLERY</a></li>
+
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -118,8 +118,8 @@
                 <li><a href="blog-single.html">BLOG DETAILS</a></li>                                            
               </ul>
             </li>
-            <li><a href="formCreate.html">CONTACT</a></li>
-            <li><a href="404.html">404 PAGE</a></li>
+              <li><a href="formCreate.html">CREATE</a></li>
+              <li><a href="404.html">HISTORY</a></li>
           </ul>                           
         </div><!--/.nav-collapse -->       
       </div>          
@@ -150,33 +150,64 @@
   <section id="aa-properties">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="aa-properties-content">
             <!-- start properties content head -->
-            <div class="aa-properties-content-head">              
+            <div class="aa-properties-content-head">
               <div class="aa-properties-content-head-left">
-                <form action="" class="aa-sort-form">
-                  <label for="">Sort by</label>
-                  <select name="">
-                    <option value="1" selected="Default">Default</option>
-                    <option value="2">Name</option>
-                    <option value="3">Price</option>
-                    <option value="4">Date</option>
-                  </select>
-                </form>
-                <form action="" class="aa-show-form">
-                  <label for="">Show</label>
-                  <select name="">
-                    <option value="1" selected="12">6</option>
-                    <option value="2">12</option>
-                    <option value="3">24</option>
-                  </select>
+                  <section class="vh-100" style="background-color: #f4f5f7;">
+                      <div class="container py-5 h-100">
+                              <div class="col col-lg-12 mb-4 mb-lg-0">
+                                  <div class="card mb-3" style="border-radius: .5rem;">
+                                      <div class="row g-0">
+                                          <div class="col-md-4 gradient-custom text-center text-white"
+                                               style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                                   alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                                              <h5>Marie Horwitz</h5>
+                                              <p>Web Designer</p>
+                                              <i class="far fa-edit mb-5"></i>
+                                          </div>
+                                          <div class="col-md-8">
+                                              <div class="card-body p-4">
+                                                  <h6>Information</h6>
+                                                  <hr class="mt-0 mb-4">
+                                                  <div class="row pt-1">
+                                                      <div class="col-6 mb-3">
+                                                          <h6>Email</h6>
+                                                          <p class="text-muted">info@example.com</p>
+                                                      </div>
+                                                      <div class="col-6 mb-3">
+                                                          <h6>Phone</h6>
+                                                          <p class="text-muted">123 456 789</p>
+                                                      </div>
+                                                  </div>
+                                                  <h6>Projects</h6>
+                                                  <hr class="mt-0 mb-4">
+                                                  <div class="row pt-1">
+                                                      <div class="col-6 mb-3">
+                                                          <h6>Recent</h6>
+                                                          <p class="text-muted">Lorem ipsum</p>
+                                                      </div>
+                                                      <div class="col-6 mb-3">
+                                                          <h6>Most Viewed</h6>
+                                                          <p class="text-muted">Dolor sit amet</p>
+                                                      </div>
+                                                  </div>
+                                                  <div class="d-flex justify-content-start">
+                                                      <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                                                      <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                                                      <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </section>
                 </form>
               </div>
-              <div class="aa-properties-content-head-right">
-                <a id="aa-grid-properties" href="#"><span class="fa fa-th"></span></a>
-                <a id="aa-list-properties" href="#"><span class="fa fa-list"></span></a>
-              </div>            
             </div>
             <!-- Start properties content body -->
             <div class="aa-properties-content-body">
@@ -198,7 +229,7 @@
                       </div>
                       <div class="aa-properties-about">
                         <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
                       </div>
                       <div class="aa-properties-detial">
                         <span class="aa-price">
@@ -226,7 +257,7 @@
                       </div>
                       <div class="aa-properties-about">
                         <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
                       </div>
                       <div class="aa-properties-detial">
                         <span class="aa-price">
@@ -237,118 +268,90 @@
                     </div>
                   </article>
                 </li>
-                 <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="#">
-                      <img alt="img" src="img/item/2.jpg">
-                    </a>
-                    <div class="aa-tag sold-out">
-                      Sold Out
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <span>1100 SQ FT</span>
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                      </div>
-                      <div class="aa-properties-detial">
+                  <li>
+                      <article class="aa-properties-item">
+                          <a class="aa-properties-item-img" href="#">
+                              <img alt="img" src="img/item/1.jpg">
+                          </a>
+                          <div class="aa-tag sold-out">
+                              Sold Out
+                          </div>
+                          <div class="aa-properties-item-content">
+                              <div class="aa-properties-info">
+                                  <span>5 Rooms</span>
+                                  <span>2 Beds</span>
+                                  <span>3 Baths</span>
+                                  <span>1100 SQ FT</span>
+                              </div>
+                              <div class="aa-properties-about">
+                                  <h3><a href="#">Appartment Title</a></h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
+                              </div>
+                              <div class="aa-properties-detial">
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="#">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="#">
-                      <img alt="img" src="img/item/5.jpg">
-                    </a>
-                    <div class="aa-tag for-sale">
-                      For Sale
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <span>1100 SQ FT</span>
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                      </div>
-                      <div class="aa-properties-detial">
+                                  <a class="aa-secondary-btn" href="#">View Details</a>
+                              </div>
+                          </div>
+                      </article>
+                  </li>
+                  <li>
+                      <article class="aa-properties-item">
+                          <a class="aa-properties-item-img" href="#">
+                              <img alt="img" src="img/item/1.jpg">
+                          </a>
+                          <div class="aa-tag sold-out">
+                              Sold Out
+                          </div>
+                          <div class="aa-properties-item-content">
+                              <div class="aa-properties-info">
+                                  <span>5 Rooms</span>
+                                  <span>2 Beds</span>
+                                  <span>3 Baths</span>
+                                  <span>1100 SQ FT</span>
+                              </div>
+                              <div class="aa-properties-about">
+                                  <h3><a href="#">Appartment Title</a></h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
+                              </div>
+                              <div class="aa-properties-detial">
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="#">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                 <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="#">
-                      <img alt="img" src="img/item/3.jpg">
-                    </a>
-                    <div class="aa-tag for-rent">
-                        For Rent
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <span>1100 SQ FT</span>
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                      </div>
-                      <div class="aa-properties-detial">
+                                  <a class="aa-secondary-btn" href="#">View Details</a>
+                              </div>
+                          </div>
+                      </article>
+                  </li>
+                  <li>
+                      <article class="aa-properties-item">
+                          <a class="aa-properties-item-img" href="#">
+                              <img alt="img" src="img/item/1.jpg">
+                          </a>
+                          <div class="aa-tag sold-out">
+                              Sold Out
+                          </div>
+                          <div class="aa-properties-item-content">
+                              <div class="aa-properties-info">
+                                  <span>5 Rooms</span>
+                                  <span>2 Beds</span>
+                                  <span>3 Baths</span>
+                                  <span>1100 SQ FT</span>
+                              </div>
+                              <div class="aa-properties-about">
+                                  <h3><a href="#">Appartment Title</a></h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
+                              </div>
+                              <div class="aa-properties-detial">
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="#">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                 <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="#">
-                      <img alt="img" src="img/item/4.jpg">
-                    </a>
-                    <div class="aa-tag for-sale">
-                      For Sale
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <span>1100 SQ FT</span>
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          $35000
-                        </span>
-                        <a class="aa-secondary-btn" href="#">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
+                                  <a class="aa-secondary-btn" href="#">View Details</a>
+                              </div>
+                          </div>
+                      </article>
+                  </li>
               </ul>
             </div>
             <!-- Start properties content bottom -->
@@ -359,13 +362,6 @@
                     <a href="#" aria-label="Previous">
                       <span aria-hidden="true">&laquo;</span>
                     </a>
-                  </li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li class="active"><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li>
                     <a href="#" aria-label="Next">
                       <span aria-hidden="true">&raquo;</span>
                     </a>
@@ -376,107 +372,107 @@
           </div>
         </div>
         <!-- Start properties sidebar -->
-        <div class="col-md-4">
-          <aside class="aa-properties-sidebar">
-            <!-- Start Single properties sidebar -->
-            <div class="aa-properties-single-sidebar">
-              <h3>Properties Search</h3>
-              <form action="">
-                <div class="aa-single-advance-search">
-                  <input type="text" placeholder="Type Your Location">
-                </div>
-                <div class="aa-single-advance-search">
-                  <select id="" name="">
-                   <option selected="" value="0">Category</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-                </div>
-                <div class="aa-single-advance-search">
-                  <select id="" name="">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-                </div>
-                <div class="aa-single-advance-search">
-                  <select id="" name="">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-                </div>
-                <div class="aa-single-filter-search">
-                  <span>AREA (SQ)</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower" class="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper" class="example-val">100.00</span>
-                  <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>                  
-                </div>
-                <div class="aa-single-filter-search">
-                  <span>PRICE ($)</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower2" class="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper2" class="example-val">100.00</span>
-                  <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>      
-                </div>
-                <div class="aa-single-advance-search">
-                  <input type="submit" value="Search" class="aa-search-btn">
-                </div>
-              </form>
-            </div> 
-            <!-- Start Single properties sidebar -->
-            <div class="aa-properties-single-sidebar">
-              <h3>Populer Properties</h3>
-              <div class="media">
-                <div class="media-left">
-                  <a href="#">
-                    <img class="media-object" src="img/item/1.jpg" alt="img">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="#">This is Title</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>                
-                  <span>$65000</span>
-                </div>              
-              </div>
-              <div class="media">
-                <div class="media-left">
-                  <a href="#">
-                    <img class="media-object" src="img/item/1.jpg" alt="img">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="#">This is Title</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>                
-                  <span>$65000</span>
-                </div>              
-              </div>
-              <div class="media">
-                <div class="media-left">
-                  <a href="#">
-                    <img class="media-object" src="img/item/1.jpg" alt="img">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="#">This is Title</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>                
-                  <span>$65000</span>
-                </div>              
-              </div>
-            </div>
-          </aside>
-        </div>
+<!--        <div class="col-md-4">-->
+<!--          <aside class="aa-properties-sidebar">-->
+<!--            &lt;!&ndash; Start Single properties sidebar &ndash;&gt;-->
+<!--            <div class="aa-properties-single-sidebar">-->
+<!--              <h3>Properties Search</h3>-->
+<!--              <form action="">-->
+<!--                <div class="aa-single-advance-search">-->
+<!--                  <input type="text" placeholder="Type Your Location">-->
+<!--                </div>-->
+<!--                <div class="aa-single-advance-search">-->
+<!--                  <select id="" name="">-->
+<!--                   <option selected="" value="0">Category</option>-->
+<!--                    <option value="1">Flat</option>-->
+<!--                    <option value="2">Land</option>-->
+<!--                    <option value="3">Plot</option>-->
+<!--                    <option value="4">Commercial</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                <div class="aa-single-advance-search">-->
+<!--                  <select id="" name="">-->
+<!--                    <option selected="" value="0">Type</option>-->
+<!--                    <option value="1">Flat</option>-->
+<!--                    <option value="2">Land</option>-->
+<!--                    <option value="3">Plot</option>-->
+<!--                    <option value="4">Commercial</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                <div class="aa-single-advance-search">-->
+<!--                  <select id="" name="">-->
+<!--                    <option selected="" value="0">Type</option>-->
+<!--                    <option value="1">Flat</option>-->
+<!--                    <option value="2">Land</option>-->
+<!--                    <option value="3">Plot</option>-->
+<!--                    <option value="4">Commercial</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                <div class="aa-single-filter-search">-->
+<!--                  <span>AREA (SQ)</span>-->
+<!--                  <span>FROM</span>-->
+<!--                  <span id="skip-value-lower" class="example-val">30.00</span>-->
+<!--                  <span>TO</span>-->
+<!--                  <span id="skip-value-upper" class="example-val">100.00</span>-->
+<!--                  <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="aa-single-filter-search">-->
+<!--                  <span>PRICE ($)</span>-->
+<!--                  <span>FROM</span>-->
+<!--                  <span id="skip-value-lower2" class="example-val">30.00</span>-->
+<!--                  <span>TO</span>-->
+<!--                  <span id="skip-value-upper2" class="example-val">100.00</span>-->
+<!--                  <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="aa-single-advance-search">-->
+<!--                  <input type="submit" value="Search" class="aa-search-btn">-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Start Single properties sidebar &ndash;&gt;-->
+<!--            <div class="aa-properties-single-sidebar">-->
+<!--              <h3>Populer Properties</h3>-->
+<!--              <div class="media">-->
+<!--                <div class="media-left">-->
+<!--                  <a href="#">-->
+<!--                    <img class="media-object" src="img/item/1.jpg" alt="img">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="media-body">-->
+<!--                  <h4 class="media-heading"><a href="#">This is Title</a></h4>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <span>$65000</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media">-->
+<!--                <div class="media-left">-->
+<!--                  <a href="#">-->
+<!--                    <img class="media-object" src="img/item/1.jpg" alt="img">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="media-body">-->
+<!--                  <h4 class="media-heading"><a href="#">This is Title</a></h4>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <span>$65000</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="media">-->
+<!--                <div class="media-left">-->
+<!--                  <a href="#">-->
+<!--                    <img class="media-object" src="img/item/1.jpg" alt="img">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="media-body">-->
+<!--                  <h4 class="media-heading"><a href="#">This is Title</a></h4>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <span>$65000</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </aside>-->
+<!--        </div>-->
       </div>
     </div>
   </section>
