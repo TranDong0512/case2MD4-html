@@ -105,22 +105,14 @@
                 <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
                     <li class="active"><a href="home.html">HOME</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROFILE <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="properties.html">PROPERTIES</a></li>
-                            <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>
+                            <li><a href="properties.html">PROFILE</a></li>
                         </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="blog-archive.html">BLOG</a></li>
-                            <li><a href="blog-single.html">BLOG DETAILS</a></li>
-                        </ul>
-                    </li>
+
                     <li><a href="formCreate.html">CREATE</a></li>
                     <li><a href="404.html">HISTORY</a></li>
                 </ul>
@@ -139,15 +131,6 @@
             <div class="aa-top-slider-single">
                 <img src="https://datthu.vn/wp-content/uploads/2021/02/chi-phi-xay-nha-2-tang-thumb.jpg" alt="img">
             </div>
-
-            <div class="aa-top-slider-single">
-                <img src="https://datthu.vn/wp-content/uploads/2021/02/chi-phi-xay-nha-2-tang-thumb.jpg" alt="img">
-            </div>
-
-            <div class="aa-top-slider-single">
-                <img src="https://datthu.vn/wp-content/uploads/2021/02/chi-phi-xay-nha-2-tang-thumb.jpg" alt="img">
-            </div>
-
             <!-- / Top slider single slide -->
         </div>
     </div>
@@ -167,8 +150,8 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="aa-single-advance-search" id="category">
-                                <select>
+                            <div class="aa-single-advance-search" >
+                                <select id="category">
                                     <option value="0" selected>Category</option>
                                     <option value="1">Flat</option>
                                     <option value="2">Land</option>
@@ -179,7 +162,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="aa-single-advance-search">
-                                <input class="aa-search-btn"  onclick="search()" value="Search">
+                                <button class="aa-search-btn" onclick="search()" value="Search">Search</button>
                             </div>
                         </div>
                     </div>
@@ -195,10 +178,9 @@
     <div class="container">
         <div class="aa-latest-property-area">
             <div class="aa-title">
-                <h2>Latest Properties</h2>
+                <h2>Home List</h2>
                 <span></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero
-                    voluptatibus.</p>
+                <p></p>
             </div>
             <div class="aa-latest-properties-content">
                 <div class="row">
@@ -221,8 +203,7 @@
                     <div class="aa-title">
                         <h2>Our Service</h2>
                         <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero
-                            voluptatibus.</p>
+                        <p></p>
                     </div>
                     <!-- service content -->
                     <div class="aa-service-content">
@@ -294,7 +275,7 @@
                     <div class="aa-title">
                         <h2>What Client Say</h2>
                         <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eaque quas debitis
+                        <p style="margin-right: 45px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eaque quas debitis
                             animi ipsum, veritatis!</p>
                     </div>
                     <!-- testimonial content -->
@@ -371,71 +352,18 @@
             <div class="col-md-12">
                 <div class="aa-latest-blog-area">
                     <div class="aa-title">
-                        <h2>Latest News</h2>
+                        <h2>Top 3</h2>
                         <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni, est harum repellendus.
-                            Accusantium, nostrum!</p>
+                        <p></p>
                     </div>
                     <div class="aa-latest-blog-content">
                         <div class="row">
                             <!-- start single blog -->
-                            <div class="col-md-4">
-                                <article class="aa-blog-single">
-                                    <figure class="aa-blog-img">
-                                        <a href="#"><img src="img/blog-img-1.jpg" alt="img"></a>
-                                        <span class="aa-date-tag">15 April, 16</span>
-                                    </figure>
-                                    <div class="aa-blog-single-content">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat
-                                            magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum
-                                            tempore dolores itaque, molestias vitae.</p>
-                                        <div class="aa-blog-single-bottom">
-                                            <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                            <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                                        </div>
-                                    </div>
 
-                                </article>
+                                <div id="showTop3"></div>
+
                             </div>
                             <!-- start single blog -->
-                            <div class="col-md-4">
-                                <article class="aa-blog-single">
-                                    <figure class="aa-blog-img">
-                                        <a href="#"><img src="img/blog-img-2.jpg" alt="img"></a>
-                                        <span class="aa-date-tag">15 April, 16</span>
-                                    </figure>
-                                    <div class="aa-blog-single-content">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat
-                                            magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum
-                                            tempore dolores itaque, molestias vitae.</p>
-                                        <div class="aa-blog-single-bottom">
-                                            <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                            <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <!-- start single blog -->
-                            <div class="col-md-4">
-                                <article class="aa-blog-single">
-                                    <figure class="aa-blog-img">
-                                        <a href="#"><img src="img/blog-img-3.jpg" alt="img"></a>
-                                        <span class="aa-date-tag">15 April, 16</span>
-                                    </figure>
-                                    <div class="aa-blog-single-content">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat
-                                            magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum
-                                            tempore dolores itaque, molestias vitae.</p>
-                                        <div class="aa-blog-single-bottom">
-                                            <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                            <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -500,21 +428,82 @@
 
 <script>
     showListProduct()
-    function showListProduct(){
+    function showListProduct() {
         $.ajax({
 
             type: "GET",
             url: "http://localhost:3000/products",
-            headers:{
+            headers: {
                 'Content-Type': 'application/json',
-                Authorization : 'Bearer '+ localStorage.getItem('token')
+                Authorization: 'Bearer ' + localStorage.getItem('token')
             },
 
-            success: (listProduct) =>{
+            success: (listProduct) => {
                 console.log(listProduct)
-                let htmlProducts ="";
+                let htmlProducts = "";
                 for (let product of listProduct.products) {
-                    if(!product.status) {
+                    if (!product.status) {
+                        product.status = "Renting"
+                    } else {
+                        product.status = "Rented"
+                    }
+                    htmlProducts += ` <div class="col-md-4">
+                        <article class="aa-properties-item">
+                            <a href="#" class="aa-properties-item-img">
+                                <img src="${product.imageP}" alt="img">
+                            </a>
+                            <div class="aa-tag for-sale">
+                                ${product.status}
+                            </div>
+                            <div class="aa-properties-item-content">
+                                <div class="aa-properties-info" style="padding: 0">
+                                     <p style="margin-right: 12px !important;"><b>Address:</b> ${product.address}</p>
+                                </div>
+                                <div class="aa-properties-about">
+                                    <h3><a href="#">House: ${product.nameProduct}</a></h3>
+                                    <p style="margin-right: 12px !important;"><b>Desscription:</b> ${product.description}</p>
+                                </div>
+                                <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      <b>Price:</b> ${product.price}$
+                    </span>
+                                    <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>`
+                }
+                $('#listProduct').html(htmlProducts)
+            }
+        })
+    }
+
+    function showDetail(idProduct) {
+        console.log(idProduct)
+        document.location.href = "properties-detail.html"
+        localStorage.setItem('idProduct', idProduct)
+    }
+
+    function search() {
+        console.log(111)
+        let nameProduct = $('#nameProduct').val();
+        console.log(nameProduct)
+        let category = $('#category').val()
+        if(category === null || category === 'Category') {
+            category = ''
+        }
+        console.log(category)
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/products/findProduct?name="+nameProduct+"&id="+ category,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            success: (listProduct) => {
+                let htmlProducts = "";
+                for (let product of listProduct.products) {
+                    if (!product.status) {
                         product.status = "Chua thue"
                     } else {
                         product.status = "Da thue"
@@ -546,35 +535,59 @@
                     </div>`
                 }
                 $('#listProduct').html(htmlProducts)
+
             }
-    })
-    }
-    function showDetail(idProduct){
-        console.log(idProduct)
-        document.location.href="properties-detail.html"
-        localStorage.setItem('idProduct',idProduct)
+        })
     }
 
-    function search() {
-        let nameProduct = $('#nameProduct').val();
+    showCategory()
+
+    function showCategory() {
         $.ajax({
             type: "GET",
-            url: "http://localhost:3000/products/findByName?name="+nameProduct,
+            url: "http://localhost:3000/categories",
+
+            success: (listCategories) => {
+                console.log(listCategories)
+                let htmlCategory = `<select id="categoryInput" name="cate">
+                                        <option  >Category</option>`
+                for (let category of listCategories) {
+                    htmlCategory += `<option value="${category._id}" name="cate">${category.nameCategory}<button onclick="searchCategory()"></button></option>`
+                }
+                htmlCategory += `</select>`
+
+                $('#category').html(htmlCategory)
+            }
+        })
+    }
+
+    showTop3()
+
+    function showTop3() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/products/top3Price",
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + localStorage.getItem('token')
             },
-            success:(dataFind)=>{
-                let product = dataFind.product
-                let productHtml = `<div class="col-md-4">
+            success: (listProductTop3) => {
+                let htmlTop3 = '';
+                for (let product of listProductTop3.products) {
+                    if (!product.status) {
+                        product.status = "Renting"
+                    } else {
+                        product.status = "Rented"
+                    }
+                    htmlTop3 += `  <div class="col-md-4">
                         <article class="aa-properties-item">
                             <a href="#" class="aa-properties-item-img">
-                                <img src="${product.imageP}" alt="ảnh lỗi" style="width: 360px !important; height: 195.65px !important;">
+                                <img src="${product.imageP}" alt="img">
                             </a>
                             <div class="aa-tag for-sale">
                                 ${product.status}
                             </div>
-                            <div class="aa-properties-item-content"v >
+                            <div class="aa-properties-item-content">
                                 <div class="aa-properties-info">
                                      <p>${product.address}</p>
                                 </div>
@@ -586,40 +599,15 @@
                     <span class="aa-price">
                       ${product.price}$
                     </span>
-                       <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
-
+                                    <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
                                 </div>
                             </div>
                         </article>
-                    </div>`
-                $('#listProduct').html(productHtml)
-
-            }
-        })
-    }
-
-    showCategory()
-    function showCategory(){
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:3000/categories",
-
-            success: (listCategories) => {
-                console.log(listCategories)
-                let htmlCategory = `<select id="categoryInput" name="cate">
-                                        <option disabled selected >Category</option>`
-                for (let category of listCategories) {
-                    htmlCategory += `<option value="${category._id}" name="cate">${category.nameCategory}<button onclick="searchCategory()"></button></option>`
+                    </div> `
                 }
-                htmlCategory += `</select>`
-
-                $('#category').html(htmlCategory)
+                $('#showTop3').html(htmlTop3)
             }
         })
-    }
-
-    function searchCategory(){
-        console.log(11111)
     }
 </script>
 </body>

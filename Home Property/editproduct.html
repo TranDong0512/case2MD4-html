@@ -106,17 +106,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-                    <li><a href="home.html">HOME</a></li>
+                    <li class="active"><a href="home.html">HOME</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROFILE <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="properties.html">PROPERTIES</a></li>
+                            <li><a href="properties.html">PROFILE</a></li>
                         </ul>
                     </li>
 
 
-                    <li class="active"><a href="formCreate.html">CREATE</a></li>
+                    <li><a href="formCreate.html">CREATE</a></li>
                     <li><a href="404.html">HISTORY</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -139,14 +139,14 @@
                 <div class="aa-contact-area">
                     <div class="aa-contact-bottom">
                         <div class="aa-title">
-                            <h2>Create Home</h2>
+                            <h2>Edit Home</h2>
                             <span></span>
                         </div>
                         <div class="aa-contact-form">
                             <form enctype="multipart/form-data">
                                 <p class="comment-form-author">
                                     <label for="name">Name <span class="required">*</span></label>
-                                    <input type="text" name="author" value="" id="name" size="30" required="required">
+                                    <input type="text" name="author" value="" id="name" size="30" required="required" >
                                 </p>
                                 <p class="comment-form-email">
                                     <label for="price">Price <span class="required">*</span></label>
@@ -167,14 +167,15 @@
                                 </div>
                                 <p class="comment-form-comment">
                                     <input type="file" name="file" id="file" required="required"
-                                           style="border: 1px black;margin-bottom: 30px">
-                                    <label for="file2"> Description photo</label>
-                                    <input id="file2" type="file" name="file"  multiple style="display: inline">
+                                           style="border: 1px black">
                                 </p>
+                                <div id="img">
 
-                                <p class="form-submit" style="margin-right: 20px">
-                                    <input type="button" onclick="create()" name="submit" class="aa-browse-btn"
-                                           value="Create">
+                                </div>
+
+                                <p class="form-submit">
+                                    <input type="button" onclick="editProduct()" name="submit" class="aa-browse-btn"
+                                           value="Edit">
                                 </p>
                             </form>
                         </div>
@@ -238,39 +239,41 @@
 <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 <!-- Custom js -->
 <script src="js/custom.js"></script>
-
 <script>
-    category()
-
-    function category() {
+    showFormEdit()
+    let nameC
+    let idC
+    function showFormEdit() {
+        let id = localStorage.getItem('idProduct')
         $.ajax({
+
             type: "GET",
-            url: "http://localhost:3000/categories",
+            url: "http://localhost:3000/products/findById/"+id,
 
-            success: (listCategories) => {
-                console.log(listCategories)
-                let htmlCategory = `<select id="categoryInput" name="cate" style="margin-left: 35px">
-                                        <option disabled selected >Category</option>`
-                for (let category of listCategories) {
-                    htmlCategory += `<option value="${category._id}" name="cate">${category.nameCategory}</option>`
-                }
-                htmlCategory += `</select>`
+            success: (dataProduct) => {
+                let product = dataProduct.product
+                nameC = product.category.nameCategory
+                idC = product.category._id
+                $('#name').val(product.nameProduct)
+                $('#price').val(product.price)
+                $('#address').val(product.address)
+                $('#description').val(product.description)
+                $('#categoryInput').val(product.category.nameCategory)
+                let img = `<img src="${product.imageP}"style="width: 50px;height: 50px;">`
+                $('#img').html(img)
+                category()
 
-                $('#category').html(htmlCategory)
+
             }
         })
     }
-
-    function create() {
+    function editProduct() {console.log('aaaaa')
+        let id = localStorage.getItem('idProduct')
         let nameProduct = $('#name').val();
         let price = $('#price').val();
         let category = $('#categoryInput').val();
         let address = $('#address').val();
         let description = $('#description').val();
-        let userCreate = localStorage.getItem('idUser')
-
-
-
         let formData = new FormData();
         let file = $('#file')[0].files[0];
         formData.append('file',file);
@@ -279,47 +282,46 @@
         formData.append('category',category)
         formData.append('address',address)
         formData.append('description',description)
-        formData.append('userCreate',userCreate)
+
+        console.log(formData)
 
         $.ajax({
-            type: "POST",
-            url: "http://localhost:3000/products",
+
+            type: "PUT",
+            url: "http://localhost:3000/products/"+id,
             headers: {
 
-                Authorization : 'Bearer '+ localStorage.getItem('token')
-            },
-            data:formData,
-            contentType: false,
-            processData : false,
-            success: (idProduct) => {
-                addPhotoProduct(idProduct)
-            }
-        })
-        document.location.href= "home.html"
-    }
-    function addPhotoProduct(idProduct){
-
-        let formData = new FormData();
-        let arrFile = $('#file2')[0].files
-        for (let file of arrFile) {
-            formData.append('file',file);
-            formData.append('product',idProduct)
-
-        }
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:3000/imageProducts/"+idProduct,
-            headers: {
                 Authorization : 'Bearer '+ localStorage.getItem('token')
             },
             data:formData,
             contentType: false,
             processData : false,
             success: () => {
+                  document.location.href= 'properties.html'
+            }
+        })
+    }
+
+
+
+    function category() {
+        $.ajax({
+
+            type: "GET",
+            url: "http://localhost:3000/categories",
+
+            success: (listCategories) => {
+
+                let htmlCategory = `<select id="categoryInput" name="cate" >
+                                        <option value="${idC}">${nameC}</option>`
+                for (let category of listCategories) {
+                        htmlCategory += `<option value="${category._id}" name="cate">${category.nameCategory}</option>`
+
+                }
+                htmlCategory += `</select>`
+
+                $('#category').html(htmlCategory)
             }
         })
     }
 </script>
-
-</body>
-</html>

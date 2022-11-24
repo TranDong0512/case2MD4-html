@@ -68,8 +68,9 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="aa-header-right">
-                                <a href="register.html" class="aa-register">Register</a>
-                                <a href="signin.html" class="aa-login">Login</a>
+                                <a href="signin.html">Login
+
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -103,24 +104,13 @@
                 <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
                     <li class="active"><a href="index.html">HOME</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="signin.html">PROPERTIES <span
                                 class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="properties.html">PROPERTIES</a></li>
-                            <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>
-                        </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="blog-archive.html">BLOG</a></li>
-                            <li><a href="blog-single.html">BLOG DETAILS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="formCreate.html">CREATE</a></li>
-                    <li><a href="404.html">404 PAGE</a></li>
+                    <li><a href="signin.html">CREATE</a></li>
+                    <li><a href="404.html">HISTORY</a></li>
+
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -137,15 +127,6 @@
             <div class="aa-top-slider-single">
                 <img src="https://datthu.vn/wp-content/uploads/2021/02/chi-phi-xay-nha-2-tang-thumb.jpg" alt="img">
             </div>
-
-            <div class="aa-top-slider-single">
-                <img src="https://datthu.vn/wp-content/uploads/2021/02/chi-phi-xay-nha-2-tang-thumb.jpg" alt="img">
-            </div>
-
-            <div class="aa-top-slider-single">
-                <img src="https://datthu.vn/wp-content/uploads/2021/02/chi-phi-xay-nha-2-tang-thumb.jpg" alt="img">
-            </div>
-
             <!-- / Top slider single slide -->
         </div>
     </div>
@@ -161,12 +142,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="aa-single-advance-search">
-                                <input type="text" placeholder="Type Your Location">
+                                <input type="text" id="nameProduct" placeholder="Type Your Location">
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="aa-single-advance-search">
-                                <select>
+                            <div class="aa-single-advance-search" >
+                                <select id="category">
                                     <option value="0" selected>Category</option>
                                     <option value="1">Flat</option>
                                     <option value="2">Land</option>
@@ -177,7 +158,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="aa-single-advance-search">
-                                <input class="aa-search-btn" type="submit" value="Search">
+                                <button class="aa-search-btn" onclick="search()" value="Search">Search</button>
                             </div>
                         </div>
                     </div>
@@ -200,94 +181,9 @@
             </div>
             <div class="aa-latest-properties-content">
                 <div class="row">
-                    <div class="col-md-4">
-                        <article class="aa-properties-item">
-                            <a href="#" class="aa-properties-item-img">
-                                <img src="img/item/1.jpg" alt="img">
-                            </a>
-                            <div class="aa-tag for-sale">
-                                For Sale
-                            </div>
-                            <div class="aa-properties-item-content">
-                                <div class="aa-properties-info">
-                                    <span>5 Rooms</span>
-                                    <span>2 Beds</span>
-                                    <span>3 Baths</span>
-                                    <span>1100 SQ FT</span>
-                                </div>
-                                <div class="aa-properties-about">
-                                    <h3><a href="#">Appartment Title</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero
-                                        ducimus quibusdam odit vitae.</p>
-                                </div>
-                                <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                                    <a href="#" class="aa-secondary-btn">View Details</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="aa-properties-item">
-                            <a href="#" class="aa-properties-item-img">
-                                <img src="img/item/1.jpg" alt="img">
-                            </a>
-                            <div class="aa-tag for-sale">
-                                For Sale
-                            </div>
-                            <div class="aa-properties-item-content">
-                                <div class="aa-properties-info">
-                                    <span>5 Rooms</span>
-                                    <span>2 Beds</span>
-                                    <span>3 Baths</span>
-                                    <span>1100 SQ FT</span>
-                                </div>
-                                <div class="aa-properties-about">
-                                    <h3><a href="#">Appartment Title</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero
-                                        ducimus quibusdam odit vitae.</p>
-                                </div>
-                                <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                                    <a href="#" class="aa-secondary-btn">View Details</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="aa-properties-item">
-                            <a href="#" class="aa-properties-item-img">
-                                <img src="img/item/1.jpg" alt="img">
-                            </a>
-                            <div class="aa-tag for-sale">
-                                For Sale
-                            </div>
-                            <div class="aa-properties-item-content">
-                                <div class="aa-properties-info">
-                                    <span>5 Rooms</span>
-                                    <span>2 Beds</span>
-                                    <span>3 Baths</span>
-                                    <span>1100 SQ FT</span>
-                                </div>
-                                <div class="aa-properties-about">
-                                    <h3><a href="#">Appartment Title</a></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero
-                                        ducimus quibusdam odit vitae.</p>
-                                </div>
-                                <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                                    <a href="#" class="aa-secondary-btn">View Details</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                    <div id="listProduct">
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,132 +263,6 @@
 </section>
 <!-- / Service section -->
 
-
-<!-- Our Agent Section-->
-<section id="aa-agents">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="aa-agents-area">
-                    <div class="aa-title">
-                        <h2>Our Agents</h2>
-                        <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero
-                            voluptatibus.</p>
-                    </div>
-                    <!-- agents content -->
-                    <div class="aa-agents-content">
-                        <ul class="aa-agents-slider">
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-3.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Paul Walker</a></h4>
-                                        <span>Director</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-4.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">John Smith</a></h4>
-                                        <span>Jr. Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-1.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Philip Smith</a></h4>
-                                        <span>Top Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-5.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Adam Barney</a></h4>
-                                        <span>Expert Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-3.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">Paul Walker</a></h4>
-                                        <span>Director</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="aa-single-agents">
-                                    <div class="aa-agents-img">
-                                        <img src="img/agents/agent-4.png" alt="agent member image">
-                                    </div>
-                                    <div class="aa-agetns-info">
-                                        <h4><a href="#">John Smith</a></h4>
-                                        <span>Jr. Agent</span>
-                                        <div class="aa-agent-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- / Our Agent Section-->
 
 <!-- Client Testimonial -->
 <section id="aa-client-testimonial">
@@ -588,68 +358,16 @@
                     <div class="aa-latest-blog-content">
                         <div class="row">
                             <!-- start single blog -->
-                            <div class="col-md-4">
-                                <article class="aa-blog-single">
-                                    <figure class="aa-blog-img">
-                                        <a href="#"><img src="img/blog-img-1.jpg" alt="img"></a>
-                                        <span class="aa-date-tag">15 April, 16</span>
-                                    </figure>
-                                    <div class="aa-blog-single-content">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat
-                                            magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum
-                                            tempore dolores itaque, molestias vitae.</p>
-                                        <div class="aa-blog-single-bottom">
-                                            <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                            <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                                        </div>
-                                    </div>
 
-                                </article>
-                            </div>
-                            <!-- start single blog -->
-                            <div class="col-md-4">
-                                <article class="aa-blog-single">
-                                    <figure class="aa-blog-img">
-                                        <a href="#"><img src="img/blog-img-2.jpg" alt="img"></a>
-                                        <span class="aa-date-tag">15 April, 16</span>
-                                    </figure>
-                                    <div class="aa-blog-single-content">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat
-                                            magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum
-                                            tempore dolores itaque, molestias vitae.</p>
-                                        <div class="aa-blog-single-bottom">
-                                            <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                            <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <!-- start single blog -->
-                            <div class="col-md-4">
-                                <article class="aa-blog-single">
-                                    <figure class="aa-blog-img">
-                                        <a href="#"><img src="img/blog-img-3.jpg" alt="img"></a>
-                                        <span class="aa-date-tag">15 April, 16</span>
-                                    </figure>
-                                    <div class="aa-blog-single-content">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat
-                                            magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum
-                                            tempore dolores itaque, molestias vitae.</p>
-                                        <div class="aa-blog-single-bottom">
-                                            <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                            <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            <div id="showTop3"></div>
+
                         </div>
+                        <!-- start single blog -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- / Latest blog -->
@@ -691,7 +409,6 @@
 </footer>
 <!-- / Footer -->
 
-
 <!-- jQuery library -->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 <script src="js/jquery.min.js"></script>
@@ -708,5 +425,184 @@
 <!-- Custom js -->
 <script src="js/custom.js"></script>
 
+<script>
+    showListProduct()
+    function showListProduct() {
+        $.ajax({
+
+            type: "GET",
+            url: "http://localhost:3000/products",
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+
+            success: (listProduct) => {
+                console.log(listProduct)
+                let htmlProducts = "";
+                for (let product of listProduct.products) {
+                    if (!product.status) {
+                        product.status = "Chua thue"
+                    } else {
+                        product.status = "Da thue"
+                    }
+                    htmlProducts += ` <div class="col-md-4">
+                        <article class="aa-properties-item">
+                            <a href="#" class="aa-properties-item-img">
+                                <img src="${product.imageP}" alt="img">
+                            </a>
+                            <div class="aa-tag for-sale">
+                                ${product.status}
+                            </div>
+                            <div class="aa-properties-item-content">
+                                <div class="aa-properties-info">
+                                     <p>${product.address}</p>
+                                </div>
+                                <div class="aa-properties-about">
+                                    <h3><a href="#">${product.nameProduct}</a></h3>
+                                    <p>${product.description}</p>
+                                </div>
+                                <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      ${product.price}$
+                    </span>
+                                    <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>`
+                }
+                $('#listProduct').html(htmlProducts)
+            }
+        })
+    }
+
+    function showDetail(idProduct) {
+        console.log(idProduct)
+        document.location.href = "signin.html"
+        localStorage.setItem('idProduct', idProduct)
+    }
+
+    function search() {
+        console.log(111)
+        let nameProduct = $('#nameProduct').val();
+        console.log(nameProduct)
+        let category = $('#category').val()
+        if(category === null || category === 'Category') {
+            category = ''
+        }
+        console.log(category)
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/products/findProduct?name="+nameProduct+"&id="+ category,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            success: (listProduct) => {
+                let htmlProducts = "";
+                for (let product of listProduct.products) {
+                    if (!product.status) {
+                        product.status = "Chua thue"
+                    } else {
+                        product.status = "Da thue"
+                    }
+                    htmlProducts += ` <div class="col-md-4">
+                        <article class="aa-properties-item">
+                            <a href="#" class="aa-properties-item-img">
+                                <img src="${product.imageP}" alt="img">
+                            </a>
+                            <div class="aa-tag for-sale">
+                                ${product.status}
+                            </div>
+                            <div class="aa-properties-item-content">
+                                <div class="aa-properties-info">
+                                     <p>${product.address}</p>
+                                </div>
+                                <div class="aa-properties-about">
+                                    <h3><a href="#">${product.nameProduct}</a></h3>
+                                    <p>${product.description}</p>
+                                </div>
+                                <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      ${product.price}$
+                    </span>
+                                    <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>`
+                }
+                $('#listProduct').html(htmlProducts)
+
+            }
+        })
+    }
+
+    showCategory()
+
+    function showCategory() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/categories",
+
+            success: (listCategories) => {
+                console.log(listCategories)
+                let htmlCategory = `<select id="categoryInput" name="cate">
+                                        <option  >Category</option>`
+                for (let category of listCategories) {
+                    htmlCategory += `<option value="${category._id}" name="cate">${category.nameCategory}<button onclick="searchCategory()"></button></option>`
+                }
+                htmlCategory += `</select>`
+
+                $('#category').html(htmlCategory)
+            }
+        })
+    }
+
+    showTop3()
+
+    function showTop3() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/products/top3Price",
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            success: (listProductTop3) => {
+                let htmlTop3 = '';
+                for (let product of listProductTop3.products) {
+                    htmlTop3 += `  <div class="col-md-4">
+                        <article class="aa-properties-item">
+                            <a href="#" class="aa-properties-item-img">
+                                <img src="${product.imageP}" alt="img">
+                            </a>
+                            <div class="aa-tag for-sale">
+                                ${product.status}
+                            </div>
+                            <div class="aa-properties-item-content">
+                                <div class="aa-properties-info">
+                                     <p>${product.address}</p>
+                                </div>
+                                <div class="aa-properties-about">
+                                    <h3><a href="#">${product.nameProduct}</a></h3>
+                                    <p>${product.description}</p>
+                                </div>
+                                <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      ${product.price}$
+                    </span>
+                                    <a ><button onclick="showDetail('${product._id}')" class="aa-secondary-btn">View Details</button></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div> `
+                }
+                $('#showTop3').html(htmlTop3)
+            }
+        })
+    }
+</script>
 </body>
 </html>
